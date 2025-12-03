@@ -1,5 +1,6 @@
 import java.nio.file.*;
 import java.io.IOException;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -8,7 +9,7 @@ public class Main {
             return;
         }
 
-        String day = args[0]; 
+        String day = args[0];
         String path = "inputs/" + day + ".txt";
 
         var lines = Files.readAllLines(Paths.get(path));
@@ -17,7 +18,10 @@ public class Main {
             case "day1":
                 System.out.println(Day1.solve(lines));
                 break;
-            default: 
+            case "day2":
+                System.out.println(Day2.solve(lines));
+                break;
+            default:
                 System.out.println("oopsies invalid day");
         }
     }
