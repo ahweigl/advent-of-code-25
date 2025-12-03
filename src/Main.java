@@ -14,12 +14,16 @@ public class Main {
 
         var lines = Files.readAllLines(Paths.get(path));
 
+
         switch (day) {
             case "day1":
                 System.out.println(Day1.solve(lines));
                 break;
             case "day2":
                 System.out.println(Day2.solve(lines));
+                break;
+            case "day3":
+                System.out.println(Day3.solve(lines));
                 break;
             default:
                 System.out.println("oopsies invalid day");
